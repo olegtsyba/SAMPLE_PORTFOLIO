@@ -1,0 +1,113 @@
+.resume {
+   padding-top: 120px;
+   
+   &__title {
+      position: relative;
+      text-align: center;
+      @include before_circle;
+      &:before {
+         top: -6px;
+         left: 50%;
+         transform: translateX(-50%);
+      }
+   }
+   &__subtitle {
+      text-align: center;
+   }
+   &__wrapper {
+      padding: 60px 65px 0 65px;
+      display: grid;
+      grid-template-columns: repeat(2, 430px);
+      column-gap: 136px;
+   }
+   &__column {
+      
+      &-title {
+         position: relative;
+         padding-left: 35px;
+         &::before {
+            content: '';
+            position: absolute;
+            left: -7px;
+            width: 15px;
+            height: 15px;
+            border-radius:100%;
+            background: $main-color;
+            top: 50%;
+            transform: translateY(-50%);
+
+         }
+      }
+
+      ul{
+         list-style-type: none;
+         li {
+            position: relative;
+            &::after {
+               content:'';
+               width: 1px;
+               height: calc(100% + 16px);   
+               position: absolute;
+               top: -16px;
+               left: 0;
+               background-color:black;
+            }
+         }
+      }
+   }
+   &__item {
+      position: relative;
+      &::before {
+         content:'';
+         position: absolute;
+         top: 73px;
+         height: 1px;
+         width: 44px;
+         background-color:black;
+      }
+      &-head {
+         position: relative;
+         padding: 45px 0 0 100px;
+         h4 {
+            margin-bottom: 0;
+         }
+      }
+      &-body {
+         padding-left: 43px;
+         margin-top:12px;
+         
+      }
+
+      &-icon {
+         position: absolute;
+         top: 70px;
+         left: 59px;
+         &::before {
+            content: '';
+            position: absolute;
+            left: -15px;
+            width: 36px;
+            height: 36px;
+            border-radius:100%;
+            background: $main-color;
+            top: 15%;
+            transform: translateY(-50%);
+
+         }
+      }
+
+      &-location {
+         font-size: 12px;
+         line-height: 18px;
+         margin-top: 5px;
+      }
+
+      &-body {
+         font-size: 12px;
+         line-height: 18px;
+      }
+   }
+
+
+   
+}
